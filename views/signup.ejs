@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("include/head") %>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    
+    <link href="/styles/common.css" rel="stylesheet">
+    <link href="/styles/signup.css" rel="stylesheet">
+    <title>Signup</title>
+
+</head>
+<body>
+    <section class="signup-section">
+        <div class="signup-form">
+            <h2>SignUp to SafeReturns</h2>
+            <form action="/submit-signup" method="POST">
+                <div class="form-group">
+                    <label for="username">Create a Username<span class="required">*</span></label>
+                    <p class="username-warning">⚠️ This username is already taken!</p>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Set a Password<span class="required">*</span></label>
+                    <input type="password" id="password" name="password" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Your Password<span class="required">*</span></label>
+                    <p class="pass-warning">⚠️ Password do not match!</p>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="fullname">Full Name or Organization Name<span class="required">*</span></label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <fieldset>
+                    <p class="question-label">Type of User<span class="required">*</span></p>
+                    <div class="radio-group">
+                        <!-- <div class="radio-subgroup"> -->
+                            <input type="radio" name="userType" value="individual" id="individual" required> 
+                            <label for="individual">Individual</label> 
+                        <!-- </div> -->
+                        <!-- <div class="radio-subgroup"> -->
+                            <input type="radio" name="userType" value="ngo" id="NGO" required> 
+                            <label for="NGO">NGO</label> 
+                        <!-- </div> -->
+                        <!-- <div class="radio-subgroup"> -->
+                            <input type="radio" name="userType" value="police" id="police-station" required>
+                            <label for="police-station">Police Station</label>
+                        <!-- </div> -->
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <label for="email">Email Address (for updates)<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number<span class="required">*</span></label>
+                    <input type="tel" id="contactNumber" name="contactNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Permanent Address<span class="required">*</span></label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <fieldset>
+                    <div class="checkbox">
+                        <input type="checkbox" name="terms" id="terms-and-conditions" required>
+                        <label class="checkbox-label" for="terms-and-conditions">I agree to the <a href="/terms-and-conditions" target="_blank">Terms and Conditions</a><span class="required">*</span></label>
+                    </div>
+                </fieldset>
+
+                
+                <button type="submit" class="submit-button">Verify and Sign Up</button>
+            </form>
+            <p>
+                Already have an account? <a href="/login">Log in here</a>
+               
+            </p>
+        </div>
+    </section>
+</body>
+</html>

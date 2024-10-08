@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--bg-color);
+}
+
+.signup-section {
+    background-color: var(--bg-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.signup-form {
+    max-width: 520px; /* Increased width by 20px */
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 30px; /* Increased padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+
+.signup-form h2 {
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--h1-color);
+    margin-bottom: 20px;
+}
+
+.form-group, fieldset {
+    margin-bottom: 15px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 5px;
+    color: var(--p-color);
+    text-align: left;
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.submit-button {
+    background-color: #fa6742;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #f45730;
+}
+
+/* .or-divider {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #6e7a8a;
+} */
+
+p {
+    color: #6e7a8a;
+    margin-top: 20px;
+}
+
+a {
+    color: #fa6742;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.pass-warning, .username-warning {
+    color: rgb(150, 0, 0); /* Set the text color to red */
+    font-size: 14px;
+    text-align: left;
+    /* display: none; */
+    margin: 2px 0 5px 0;
+
+}
+
+input {
+    color: var(--p-color-from);
+}
+
+input:focus, textarea:focus{
+    border: 1px solid var(--org-color); /* Customize the border on focus */
+    outline: none; /* Remove the default outline */
+}
+
+textarea {
+    margin: 0;
+}
+
+/* 
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    margin-right: 1px;
+} */
+
+.question-label {
+    display: block;
+    margin: 0;
+    margin-bottom: 5px;
+    color: var(--p-color);
+    text-align: left;
+    font-size: 15px;
+}
+/* 
+.radio-group {
+    display: block;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.radio-subgroup {
+    display: flex; 
+    justify-content: left;
+    flex-direction: row;
+    /* justify-content: center; 
+} */
+
+fieldset {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+
+.radio-group, .checkbox{
+    float: left;
+    clear: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.radio-group label, .checkbox label {
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 1em 0px 8px;
+
+    margin-bottom: 12px;
+    color: #52565b;
+    font-size: 15px;
+  }
+  
+  input[type="radio"],
+  input.radio, input[type="checkbox"], input.checkbox {
+    float: left;
+    clear: none;
+    margin: 2px 0 0 2px;
+  }
+
+

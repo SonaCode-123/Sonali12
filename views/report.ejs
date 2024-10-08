@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("include/head") %>
+    
+    <link href="/styles/common.css" rel="stylesheet">
+    <link href="/styles/signup.css" rel="stylesheet">       
+    <title>Report Missing or Found Person</title>
+</head>
+<body>
+    <%- include("include/nav") %>
+
+    <section class="signup-section">
+        <div class="signup-form">
+            <h1>Report Missing or Found Person</h1>
+            <form action="/submit-report" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="userType">User Type</label>
+                    <select id="userType" name="userType" required>
+                        <option value="user">User/NGO</option>
+                        <option value="police">Police</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="age">Approximate Age</label>
+                    <input type="number" id="age" name="approximateAge" min="1" max="120" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="photo">Clear Photo (JPG/PNG)</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                    <p class="image-warning">Please upload a clear photo for accurate face recognition.</p>
+                </div>
+        
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+        
+                <div class="form-group">
+                    <label for="lastSeenLocation">Last Seen Location</label>
+                    <input type="text" id="lastSeenLocation" name="lastSeenLocation" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="addressDetails">Address Details</label>
+                    <textarea id="addressDetails" name="addressDetails" rows="4" placeholder="Address where the person was last seen" required></textarea>
+                </div>
+        
+                <div class="form-group">
+                    <label for="contactInfo">Contact Info (for match notification)</label>
+                    <input type="email" id="contactInfo" name="contactInfo" placeholder="Enter your email address" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="personStatus">Person Status</label>
+                    <select id="personStatus" name="personStatus" required>
+                        <option value="missing">Missing Person</option>
+                        <option value="found">Found Person</option>
+                    </select>
+                </div>
+                
+                <!-- Hidden User ID field -->
+                <input type="hidden" name="userId" value="<%= userId %>"> <!-- Pass user ID dynamically here -->
+
+                <button type="submit" class="submit-button">Submit Report</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

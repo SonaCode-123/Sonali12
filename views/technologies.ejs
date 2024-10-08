@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("include/head") %>
+
+    <link href="/styles/common.css" rel="stylesheet">
+    <link href="/styles/common-section.css" rel="stylesheet">
+    <script src="/scripts/navbar.js" defer></script>
+    <title>Technologies</title>
+</head>
+<body>
+    <%- include("include/nav") %>
+
+    <section class="section">
+        <h1>Technologies Used</h1>
+        <p>SafeReturns leverages a combination of modern web development technologies, frameworks, and tools to deliver an efficient and scalable platform. Below is a detailed breakdown of the key technologies used across the project’s frontend, backend, and additional services:</p>
+    
+        <h3>Frontend Technologies</h3>
+        <ul>
+            <li><strong>HTML (Hypertext Markup Language):</strong> The backbone of the website’s structure, responsible for defining the content and layout of web pages.</li>
+            <li><strong>CSS (Cascading Style Sheets):</strong> Used to style and design the user interface, making it responsive and visually appealing.</li>
+            <li><strong>JavaScript:</strong> Provides interactivity to the platform, handling events, validations, and dynamic content changes.</li>
+            <li><strong>EJS (Embedded JavaScript):</strong> Templating engine used to render dynamic web pages on the server side, ensuring seamless data injection into the HTML structure.</li>
+        </ul>
+    
+        <h3>Backend Technologies</h3>
+        <ul>
+            <li><strong>Node.js:</strong> A runtime environment that enables running JavaScript on the server side, allowing for fast, event-driven back-end services.</li>
+            <li><strong>Express.js:</strong> A minimalist web framework for Node.js, handling HTTP requests and routing, providing the core backend functionality for SafeReturns.</li>
+        </ul>
+    
+        <h3>Database</h3>
+        <ul>
+            <li><strong>MongoDB:</strong> A NoSQL database used to store the information of users, missing persons, and other relevant data in a flexible, JSON-like format, allowing for scalability and efficient queries.</li>
+        </ul>
+    
+        <h3>Facial Recognition</h3>
+        <ul>
+            <li><strong>DeepFace (FaceNet Model):</strong> An advanced facial recognition library used for identifying missing persons by comparing and matching facial features, even accounting for age differences. This model helps SafeReturns provide 93% accurate results for identity verification.</li>
+            <li><strong>Convolutional Neural Networks (CNN):</strong> Used in the background of DeepFace, CNN helps in feature extraction and matching by analyzing images to identify key facial landmarks.</li>
+        </ul>
+    
+        <h3>Email Notifications</h3>
+        <ul>
+            <li><strong>SMTP (Simple Mail Transfer Protocol):</strong> A protocol used to send automatic email notifications to users when a match is found in the system, ensuring timely alerts for quick action.</li>
+        </ul>
+    
+        <h3>Version Control and Collaboration</h3>
+        <ul>
+            <li><strong>Git:</strong> A distributed version control system used to track changes in the project’s source code and collaborate efficiently during development.</li>
+            <li><strong>GitHub:</strong> A web-based platform for hosting and managing the project’s code repository, enabling collaboration, version control, and deployment management.</li>
+        </ul>
+    
+        <h3>Package Management</h3>
+        <ul>
+            <li><strong>npm (Node Package Manager):</strong> Used to manage project dependencies, making it easy to install, update, and maintain the libraries and tools required for SafeReturns.</li>
+        </ul>
+    
+        <h3>Development Tools</h3>
+        <ul>
+            <li><strong>VS Code:</strong> The primary code editor used in the development of SafeReturns, providing debugging, syntax highlighting, and project management features.</li>
+        </ul>
+    </section>
+    
+</body>
+</html>

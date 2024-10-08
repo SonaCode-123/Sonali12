@@ -1,0 +1,112 @@
+/* Ensure the body takes full viewport height and centers content */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: "Roboto", sans-serif;
+    background-color: var(--bg-color);
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    box-sizing: border-box; /* Include padding and border in the height */
+}
+
+/* Flexbox for centering the login form */
+.login-section {
+    background-color: var(--bg-color);
+    padding: 40px 20px; /* Add some padding for smaller screens */
+    text-align: center;
+    width: 100%; /* Ensure it doesn't exceed the viewport width */
+    max-width: 500px; /* Optional: Limit max width of the login section */
+}
+
+/* Styling for the login form */
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 30px; /* Adjust padding */
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+/* Additional styling for form elements */
+.login-form h2 {
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--h1-color);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--p-color);
+    text-align: left;
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    background-color: var(--org-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: var(--org-color-hover);
+}
+
+.or-divider {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: var(--p-color);
+}
+
+p {
+    color: var(--p-color);
+    margin-top: 20px;
+}
+
+a {
+    color: var(--org-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.password-warning {
+    color: rgb(150, 0, 0); /* Set the text color to red */
+    font-size: 14px;
+    text-align: left;
+    margin: -10px 0 10px 0;
+    /* display: none; */
+}
+
+input {
+    color: var(--p-color-from);
+}
+
+input:focus {
+    border: 1px solid var(--org-color); /* Customize the border on focus */
+    outline: none; /* Remove the default outline */
+}

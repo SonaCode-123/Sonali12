@@ -1,0 +1,154 @@
+:root {
+  --org-color: #fa6742;             
+  --org-color-hover: #f45730;     
+  --bg-color: #f0f4f8;             
+  --h1-color: #34445c;            
+  --p-color: #6e7a8a;             
+  --p-color-from: #4e4e4e;
+}
+
+/* ---- HEADER ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lexend Deca", 'Arial', sans-serif;
+  background-color: #e4f1ff;
+  /* background-color: #204369; */
+
+}
+
+header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaf0f6;
+  padding: 0 100px;
+  position: relative;
+}
+
+.logo-img {
+  width: 2.4rem;
+  padding-top: 5px;
+}
+
+nav {
+  display: flex;
+  justify-content:left;
+  align-items: center;
+  padding: 15px 0px;
+}
+
+nav a {
+  color: #2e475d;
+  font-family: "Lexend Deca", sans-serif;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin: 0 14px;
+  font-size: 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #fa6742;
+}
+
+nav a:is(:link, :active, :visited).active {
+  text-decoration: underline;
+  color: #fa6742;
+}
+
+
+/* Hamburger icon for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+/* Dropdown menu for mobile (initial state hidden) */
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile nav dropdown visible when toggled */
+.nav-dropdown.show {
+  display: block;
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 12px;
+  color: #2e475d;
+  text-decoration: none;
+}
+
+.nav-dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+/* ---- Responsive Design ---- */
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    display: none; /* Hide the nav links on smaller screens */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger menu */
+  }
+}
+
+/* For mobile screens */
+@media screen and (max-width: 480px) {
+  .logo h1 {
+    font-size: 18px;
+  }
+
+  .hamburger {
+    margin-left: auto;
+  }
+
+  .nav-dropdown a {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
+/* Remove dropdown in larger screens */
+@media screen and (min-width: 768px) {
+  .nav-dropdown {
+      display: none !important; 
+  }
+  
+  nav {
+      display: flex; 
+  }
+}

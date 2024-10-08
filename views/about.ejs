@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("include/head") %>
+
+    <link href="/styles/common.css" rel="stylesheet">
+    <link href="/styles/common-section.css" rel="stylesheet">
+    <script src="/scripts/navbar.js" defer></script> 
+    <title>About</title>
+</head>
+<body>
+    <%- include("include/nav") %>
+
+    
+    <section class="section">
+        <h1>About</h1>
+        <h3>Overview</h3>
+        <p>SafeReturns is a web-based platform designed to help reunite missing persons with their families. It connects police stations, local people, and NGOs, allowing them to collaborate in finding lost individuals efficiently. By leveraging cutting-edge facial recognition technology, SafeReturns simplifies the search process, helping families and authorities match lost persons with their relatives.</p>
+
+        <h3>Purpose and Impact</h3>
+        <p>The project aims to address the growing concern of missing persons by creating a centralized platform that facilitates data input, search, and notification. SafeReturns helps streamline the process, making it easier for authorities and loved ones to track missing individuals and reconnect them with their families, offering a quicker and more reliable way to bring people home.</p>
+
+        <h3>Features</h3>
+        <ul>
+            <li><strong>User-Friendly Interface:</strong> Easy-to-navigate UI for both the public and authorities.</li>
+            <li><strong>Facial Recognition:</strong> Age-based facial recognition technology powered by CNN and DeepFace to identify individuals, even with changes due to aging.</li>
+            <li><strong>Notification Two-Role System:</strong> Automatic email notifications via SMTP to alert users when a potential match is found.</li>
+            <li><strong>Two-Role System:</strong>
+                <ul>
+                    <li><strong>For Families:</strong> Allows individuals to input details of missing family members.</li>
+                    <li><strong>For Lost Persons:</strong> Enables people who are lost to input their details to find their families.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Workflow</h3>
+        <ul>
+            <li>Users sign up and log into the platform.</li>
+            <li>Input information and upload images for a missing person or themselves.</li>
+            <li>The system uses advanced facial recognition to search the database.</li>
+            <li>Matches are notified through email, ensuring immediate response when a person is identified.</li>
+        </ul>
+
+        <h3>Technology Stack</h3>
+        <ul>
+            <li><strong>Frontend:</strong> EJS, CSS, JavaScript</li>
+            <li><strong>Backend:</strong> Node.js, Express.js</li>
+            <li><strong>Database:</strong> MongoDB</li>
+            <li><strong>Facial Recognition:</strong> DeepFace (FaceNet model)</li>
+            <li><strong>Additional Tools:</strong> SMTP for email notifications, Git/GitHub for version control, and npm for managing dependencies.</li>
+        </ul>
+
+        <h3>Future Enhancements</h3>
+        <ul>
+            <li>Expanding the database to include global records for cross-border searches.</li>
+            <li>Integration with mobile applications to widen accessibility.</li>
+            <li>Implementing geolocation services for more targeted searching.</li>
+        </ul>
+
+        <h3>Social Impact</h3>
+        <p>By providing a reliable and accessible platform, SafeReturns aims to decrease the time and effort it takes to reconnect missing persons with their loved ones. It also empowers local communities and law enforcement agencies to collaborate more effectively.</p>
+    </section>
+</body>
+</html>

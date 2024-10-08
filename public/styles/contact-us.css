@@ -1,0 +1,122 @@
+:root {
+    --org-color: #fa6742;
+    --org-color-hover: #f45730;
+    --bg-color: #f0f4f8;
+    --h1-color: #34445c;
+    --p-color: #6e7a8a;
+    --input-border: #e0e0e0;
+    --input-focus-border: #fa6742;
+    --button-bg: #fa6742;
+    --button-hover-bg: #f45730;
+  }
+  
+  body {
+    font-family: "Lexend Deca", 'Arial', sans-serif;
+    background-color: #e4f1ff;
+    color: var(--p-color);
+    margin: 0;
+  }
+  
+  .contact-section {
+    padding: 50px 100px;
+    background-color: #e4f1ff;
+  }
+  
+  .contact-section h1 {
+    color: #fa6742;
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-section p {
+    font-size: 14px;
+    color: var(--p-color);
+    margin-bottom: 40px;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .contact-form {
+    flex: 1;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    color: var(--h1-color);
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: inherit;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--input-focus-border);
+  }
+  
+  .contact-form .submit-btn {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .contact-form .submit-btn:hover {
+    background-color: var(--button-hover-bg);
+  }
+  
+  .contact-info {
+    flex: 1;
+  }
+  
+  .contact-info h3 {
+    color: var(--h1-color);
+    font-size: 18.7px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info a {
+    color: var(--org-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+    color: var(--org-color-hover);
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+    .contact-section {
+      padding: 30px;
+    }
+  }
+  
