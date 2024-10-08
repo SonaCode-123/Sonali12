@@ -28,21 +28,21 @@ mongoose.connect(uri)
         process.exit(1);
     });
 
-// Middleware to parse incoming request bodies
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../views'));
 
-// Session configuration
+
 app.use(session({
     secret: 'your_secret_key', // Change to a strong secret
     resave: false,
     saveUninitialized: true,
 }));
 
-// Ensure the 'uploads' folder exists
+
 const uploadPath = path.join(__dirname, '../uploads/');
 if (!fs.existsSync(uploadPath)) {
     fs.mkdirSync(uploadPath);
@@ -105,17 +105,17 @@ const PoliceReportSchema = new mongoose.Schema({
 
 const PoliceReport = mongoose.model('PoliceReport', PoliceReportSchema);
 
-// Route to render the home page (index.ejs)
+
 app.get('/', (req, res) => {
     res.render('index');
 });
 
-// Route to render the signup page
+
 app.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-// Route to handle signup form submission
+
 app.post('/submit-signup', async (req, res) => {
     const { username, password, fullname, userType, email, contactNumber, address } = req.body;
 
@@ -150,7 +150,7 @@ app.get('/login', (req, res) => {
     res.render('login');
 });
 
-// Route to handle login form submission
+
 app.post('/submit-login', async (req, res) => {
     const { username, password } = req.body;
 
@@ -177,13 +177,13 @@ app.post('/submit-login', async (req, res) => {
     }
 });
 
-// Route to render the report page
+
 app.get('/report', (req, res) => {
     const userId = req.query.userId;
     res.render('report', { userId });
 });
 
-// Route to handle report submission
+
 app.post('/submit-report', upload.single('photo'), async (req, res) => {
     const { userId, userType, fullName, approximateAge, gender, lastSeenLocation, addressDetails, contactInfo, personStatus } = req.body;
 
@@ -225,8 +225,8 @@ app.post('/submit-report', upload.single('photo'), async (req, res) => {
 
         // Perform face matching after saving the report
         const results = await matchFaces(photoPath);
-        req.session.results = results; // Store results in session
-        res.redirect('/findingthem'); // Redirect to finding them page
+        req.session.results = results; 
+        res.redirect('/findingthem'); 
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Error submitting report. Please try again.' });
@@ -277,26 +277,26 @@ async function matchFaces(uploadedPhotoPath) {
 
 // Route to render the finding them page
 app.get('/findingthem', (req, res) => {
-    const userId = req.session.userId; // Get user ID from session
+    const userId = req.session.userId; 
     if (!userId) {
-        return res.redirect('/login'); // Redirect to login if not authenticated
+        return res.redirect('/login'); 
     }
-    const results = req.session.results || []; // Get results from session or empty array
-    res.render('findingthem', { userId, results }); // Pass results to view
+    const results = req.session.results || []; 
+    res.render('findingthem', { userId, results }); 
 });
 
-// Logout route
+
 app.get('/logout', (req, res) => {
     req.session.destroy((err) => {
         if (err) {
             console.error(err);
             return res.redirect('/findingthem');
         }
-        res.redirect('/login'); // Redirect to login after logout
+        res.redirect('/login'); 
     });
 });
 
-// Start the server
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
